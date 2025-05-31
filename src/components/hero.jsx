@@ -1,22 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import hero from "../assets/hero.jpg";
 
-const HeroSlider = ({ activeSlide, setActiveSlide, scrollToForm }) => {
+const HeroSlider = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
   const slides = [
-    {
-      id: 0,
-      img: "https://readdy.ai/api/search-image?query=modern%20luxury%20apartment%20building%20exterior%20with%20large%20windows%2C%20contemporary%20architecture%2C%20landscaped%20entrance%2C%20blue%20sky%20background%2C%20high%20quality%20real%20estate%20photography%2C%20professional%20lighting%2C%20urban%20setting&width=1440&height=600&seq=5&orientation=landscape",
-      alt: "Edificio moderno",
-    },
-    {
-      id: 1,
-      img: "https://readdy.ai/api/search-image?query=elegant%20interior%20of%20modern%20apartment%20with%20open%20plan%20living%20space%2C%20floor%20to%20ceiling%20windows%20with%20city%20view%2C%20designer%20furniture%2C%20wooden%20floors%2C%20ambient%20lighting%2C%20high%20quality%20real%20estate%20photography&width=1440&height=600&seq=6&orientation=landscape",
-      alt: "Interior elegante",
-    },
-    {
-      id: 2,
-      img: "https://readdy.ai/api/search-image?query=happy%20family%20moving%20into%20new%20home%2C%20carrying%20boxes%2C%20smiling%2C%20modern%20house%20exterior%2C%20sunny%20day%2C%20green%20lawn%2C%20residential%20neighborhood%2C%20high%20quality%20real%20estate%20photography&width=1440&height=600&seq=7&orientation=landscape",
-      alt: "Familia feliz",
-    },
+    { id: 0, img: hero, alt: "Edificio moderno" },
+    { id: 1, img: hero, alt: "Interior elegante" },
+    { id: 2, img: hero, alt: "Familia feliz" },
   ];
 
   return (
@@ -45,11 +36,10 @@ const HeroSlider = ({ activeSlide, setActiveSlide, scrollToForm }) => {
             Encuentra el mejor piso
           </h2>
           <p className="text-xl mb-8">
-            Más de 10 productos disponibles para ti. Servicio personalizado y
-            sin comisiones ocultas.
+            Más de 10 productos disponibles para ti. Servicio personalizado y sin comisiones ocultas.
           </p>
           <button
-            onClick={scrollToForm}
+            onClick={() => console.log("Agenda una visita")}
             className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 !rounded-button whitespace-nowrap cursor-pointer"
           >
             Agenda una visita
