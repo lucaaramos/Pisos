@@ -14,7 +14,7 @@ import About from "../components/about";
 const Home = () => {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <Hero />
     < About/>
     <Products />
@@ -22,7 +22,7 @@ const Home = () => {
       <Contacto />
       <Testimonios />
       <InstagramFeed />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
