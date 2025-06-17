@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -125,7 +126,7 @@ const Footer = () => {
       <a
         href="https://wa.me/34911234567"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="stylesheet"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110 cursor-pointer"
       >
         <i className="fab fa-whatsapp text-3xl"></i>

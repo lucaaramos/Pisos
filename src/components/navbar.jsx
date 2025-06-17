@@ -17,7 +17,7 @@ const Navbar = ({ isScrolled }) => {
         </div>
         <div className="hidden md:flex space-x-6">
           <a
-            href="#inicio"
+            href="/"
             className="text-gray-700 hover:text-orange-800 font-medium cursor-pointer"
           >
             Inicio
