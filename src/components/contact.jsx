@@ -45,10 +45,10 @@ const ContactFormSection = () => {
                   <div className="mt-1 mr-4">
                     <i className="fas fa-map-marker-alt"></i>
                   </div>
-                  <div>
+                  {/* <div>
                     <h3 className="font-bold">Dirección</h3>
                     <p className="text-indigo-200">Av. Principal 123, Madrid, España</p>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex items-start">
                   <div className="mt-1 mr-4">
@@ -56,7 +56,7 @@ const ContactFormSection = () => {
                   </div>
                   <div>
                     <h3 className="font-bold">Teléfono</h3>
-                    <p className="text-indigo-200">+34 91 123 45 67</p>
+                    <p className="text-indigo-200">+54 9 11 3473-8358</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -65,7 +65,7 @@ const ContactFormSection = () => {
                   </div>
                   <div>
                     <h3 className="font-bold">Email</h3>
-                    <p className="text-indigo-200">info@pisosya.com</p>
+                    <p className="text-indigo-200">pisosya2@gmail.com</p>
                   </div>
                 </div>
               </div>

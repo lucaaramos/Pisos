@@ -1,5 +1,5 @@
 import React from "react";
-import piso2 from "../assets/5.png"; // Asegúrate de que la ruta sea correcta
+import piso2 from "../assets/21.png";
 
 const AboutUsSection = () => {
   return (
@@ -23,13 +23,18 @@ const AboutUsSection = () => {
           {/* Texto */}
           <div>
             <h3 className="text-2xl font-bold mb-4 text-orange-800">
-              Tu socio de confianza en el mercado inmobiliario
+              ¿Porque escogernos?
             </h3>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            {/* <p className="text-gray-700 mb-6 leading-relaxed">
               En <strong>PisosYa</strong> nos dedicamos a hacer realidad el sueño de tener un hogar perfecto. Con más de 10 años de experiencia en el sector, hemos ayudado a miles de familias a encontrar la propiedad que se ajusta a sus necesidades y presupuesto.
             </p>
             <p className="text-gray-700 mb-8 leading-relaxed">
               Nuestro equipo de profesionales trabaja con pasión y dedicación para ofrecerte un servicio personalizado y de calidad. Nos diferenciamos por nuestra transparencia, honestidad y compromiso con cada cliente.
+            </p> */}
+            <p className="text-gray-700 mb-6 leading-relaxed">
+            ¡Una opción moderna, resistente y fácil de instalar!
+            Gracias a su composición de piedra caliza y polímeros, estos pisos brindan una excelente durabilidad, resistencia al agua y gran estabilidad dimensional. Su sistema de encastre click permite una instalación rápida y sin necesidad de adhesivos, ideal para hogares, oficinas y comercios.
+            Ademas su diseño imita la madera y otros materiales con gran realismo, aportando calidez y estilo a cualquier ambiente
             </p>
 
             {/* Métricas */}
@@ -39,8 +44,8 @@ const AboutUsSection = () => {
                   <i className="fas fa-home text-orange-700 text-xl"></i>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800">+5000</h4>
-                  <p className="text-gray-600 text-sm">Propiedades vendidas</p>
+                  <h4 className="font-bold text-gray-800">+100</h4>
+                  <p className="text-gray-600 text-sm">Pisos vendidos</p>
                 </div>
               </div>
 
@@ -49,19 +54,19 @@ const AboutUsSection = () => {
                   <i className="fas fa-users text-orange-800 text-xl"></i>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800">+8000</h4>
+                  <h4 className="font-bold text-gray-800">+100</h4>
                   <p className="text-gray-600 text-sm">Clientes satisfechos</p>
                 </div>
               </div>
 
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                {/* <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
                   <i className="fas fa-map-marker-alt text-indigo-700 text-xl"></i>
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   <h4 className="font-bold text-gray-800">15</h4>
                   <p className="text-gray-600 text-sm">Ciudades</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
