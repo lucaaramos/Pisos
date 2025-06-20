@@ -25,12 +25,12 @@ const Footer = () => {
               <h3 className="text-2xl font-bold mb-6">
                 Pisos<span className="text-yellow-500">Ya</span>
               </h3>
-              <p className="mb-6 text-indigo-200">
+              {/* <p className="mb-6 text-indigo-200">
                 Tu socio de confianza para encontrar el hogar de tus sueños. Más
                 de 10 años de experiencia en el sector inmobiliario.
-              </p>
+              </p> */}
               <div className="flex space-x-4">
-                {["facebook-f", "twitter", "instagram", "linkedin-in"].map(
+                {["facebook-f", "instagram"].map(
                   (icon, i) => (
                     <a
                       key={i}
@@ -92,20 +92,20 @@ const Footer = () => {
               <h4 className="text-lg font-bold mb-6">Contacto</h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <i className="fas fa-map-marker-alt mt-1 mr-3 text-yellow-500"></i>
-                  <span>Av. Principal 123, Madrid, España</span>
+                  {/* <i className="fas fa-map-marker-alt mt-1 mr-3 text-yellow-500"></i> */}
+                  {/* <span>Av. Principal 123, Madrid, España</span> */}
                 </li>
                 <li className="flex items-start">
                   <i className="fas fa-phone-alt mt-1 mr-3 text-yellow-500"></i>
-                  <span>+34 91 123 45 67</span>
+                  <span>+54 9 11 3473-8358</span>
                 </li>
                 <li className="flex items-start">
                   <i className="fas fa-envelope mt-1 mr-3 text-yellow-500"></i>
-                  <span>info@pisosya.com</span>
+                  <span>pisosya2@gmail.com</span>
                 </li>
                 <li className="flex items-start">
                   <i className="fas fa-clock mt-1 mr-3 text-yellow-500"></i>
-                  <span>Lun-Vie: 9:00 - 20:00</span>
+                  <span>Lun-Sab: 9:00 - 20:00</span>
                 </li>
               </ul>
             </div>
@@ -124,7 +124,7 @@ const Footer = () => {
 
       {/* Botón WhatsApp */}
       <a
-        href="https://wa.me/34911234567"
+        href="https://wa.me/+5491134738358"
         target="_blank"
         rel="stylesheet"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110 cursor-pointer"
