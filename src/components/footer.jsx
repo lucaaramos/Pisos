@@ -70,11 +70,11 @@ const Footer = () => {
               <h4 className="text-lg font-bold mb-6">Servicios</h4>
               <ul className="space-y-3">
                 {[
-                  "Compra de propiedades",
-                  "Venta de propiedades",
-                  "Alquiler",
-                  "Asesoría legal",
-                  "Financiación",
+                  "example",
+                  "example",
+                  "example",
+                  "example",
+                  "example",
                 ].map((servicio, i) => (
                   <li key={i}>
                     <a
