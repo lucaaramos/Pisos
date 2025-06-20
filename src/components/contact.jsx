@@ -42,9 +42,6 @@ const ContactFormSection = () => {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="mt-1 mr-4">
-                    <i className="fas fa-map-marker-alt"></i>
-                  </div>
                   {/* <div>
                     <h3 className="font-bold">Dirección</h3>
                     <p className="text-indigo-200">Av. Principal 123, Madrid, España</p>

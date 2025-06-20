@@ -1,20 +1,57 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+
+// Páginas
 import Home from "./pages/home";
 import ProductDetailPage from "./pages/ProductDetailPage";
+
+// Componentes
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
+// Librerías
+import Scroll from 'smooth-scroll';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// Componente que escucha cambios de ruta y reinicia smooth-scroll
+const ScrollHandler = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Destruye y vuelve a crear smooth-scroll en cada cambio de ruta
+    const scroll = new Scroll({
+      selector: '[data-scroll]',
+      speed: 800,
+      speedAsDuration: true,
+      offset: 70,
+    });
+
+    return () => {
+      scroll.destroy();
+    };
+  }, [location]);
+
+  return null;
+};
+
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   return (
     <Router>
+      <ScrollHandler /> {/* <-- Este componente maneja el scroll */}
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/producto/:id" element={<ProductDetailPage />} />
-            {/* Otras rutas */}
           </Routes>
         </main>
         <Footer />
