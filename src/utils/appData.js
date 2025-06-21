@@ -1,11 +1,10 @@
 import { useState } from "react";
 import fondo from "../assets/5.png";
-import piso from "../assets/11.png";
+import piso from "../assets/pisos-sin-especificaciones/1.png";
 import piso1 from "../assets/14.png";
 import piso2 from "../assets/20.png";
 import piso3 from "../assets/21.png";
 import piso4 from "../assets/8.png";
-// import piso5 from "../assets/5.png";
 
 const useAppData = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -29,19 +28,19 @@ const useAppData = () => {
     {
       nombre: "María González",
       texto:
-        "Gracias a Pisos Ya encontré mi apartamento ideal en menos de una semana. El proceso fue rápido y sin complicaciones.",
+        "Gracias a Pisos Ya encontré mi piso ideal. El proceso fue rápido y sin complicaciones.",
       valoracion: 5,
     },
     {
       nombre: "Carlos Rodríguez",
       texto:
-        "Excelente servicio y atención personalizada. Me ayudaron a encontrar exactamente lo que buscaba dentro de mi presupuesto.",
+        "Excelente servicio y atención personalizada. Me ayudaron a encontrar exactamente lo que buscaba.",
       valoracion: 5,
     },
     {
       nombre: "Laura Martínez",
       texto:
-        "Profesionales y eficientes. Me sorprendió la cantidad de opciones que me ofrecieron y lo rápido que cerramos el trato.",
+        "Profesionales y eficientes. Me sorprendió la cantidad de opciones que me ofrecieron y lo rápido que realizaron el trabajo.",
       valoracion: 4,
     },
   ];
@@ -72,38 +71,34 @@ const useAppData = () => {
   const productos = [
     {
       id: 1,
-      nombre: "Piso",
+      nombre: "Piso Madera",
       imagen: piso,
       precio: "€180,000",
-      ubicacion: "Madrid, Centro",
     },
     {
       id: 2,
-      nombre: "Ático con terraza",
+      nombre: "Piso Madera",
       imagen: piso1,
       precio: "€250,000",
-      ubicacion: "Barcelona, Eixample",
     },
     {
       id: 3,
-      nombre: "Loft minimalista",
+      nombre: "piso",
       imagen: piso2,
       precio: "€145,000",
-      ubicacion: "Valencia, Ruzafa",
     },
     {
       id: 4,
-      nombre: "Casa familiar",
+      nombre: "piso",
       imagen: piso3,
       precio: "€300,000",
-      ubicacion: "Sevilla, Triana",
     },
     {
       id: 5,
-      nombre: "Estudio céntrico",
+      nombre: "piso",
       imagen: piso4,
       precio: "€95,000",
-      ubicacion: "Bilbao, Casco Viejo",
+
     },
     // {
     //   id: 6,
