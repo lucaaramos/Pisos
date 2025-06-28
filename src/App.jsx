@@ -13,6 +13,7 @@ import Footer from "./components/footer";
 import Scroll from 'smooth-scroll';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import CategoryPage from "./pages/categoryPage";
 
 // Componente que escucha cambios de ruta y reinicia smooth-scroll
 const ScrollHandler = () => {
@@ -52,6 +53,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/producto/:id" element={<ProductDetailPage />} />
+            <Route path="/categoria/:id" element={<CategoryPage />} />
+            {/* <Route path="/producto/:id" element={<ProductDetailPage />} /> */}
+            {/* <Route path="/producto/:id" element={<ProductDetailPage />} /> */}
           </Routes>
         </main>
         <Footer />
