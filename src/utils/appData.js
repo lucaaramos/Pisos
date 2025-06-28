@@ -6,6 +6,16 @@ import piso2 from "../assets/20.png";
 import piso3 from "../assets/21.png";
 import piso4 from "../assets/8.png";
 
+import piso10 from "../assets/valvi/1.JPG";
+import piso11 from "../assets/valvi/2.JPG";
+import piso12 from "../assets/valvi/3.JPG";
+import piso13 from "../assets/valvi/3.JPG";
+import piso14 from "../assets/valvi/4.JPG";
+import piso15 from "../assets/valvi/5.JPG";
+
+
+
+
 const useAppData = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,8 +81,8 @@ const useAppData = () => {
   const productos = [
     {
       id: 1,
-      nombre: "Piso Madera",
-      imagen: piso,
+      nombre: "VinicoG",
+      imagen: piso1,
       precio: "€180,000",
     },
     {
@@ -100,13 +110,80 @@ const useAppData = () => {
       precio: "€95,000",
 
     },
-    // {
-    //   id: 6,
-    //   nombre: "Dúplex de diseño",
-    //   imagen: piso5,
-    //   precio: "€210,000",
-    //   ubicacion: "Málaga, Centro",
-    // },
+  ];
+
+  const prod = [
+    // Pisos vinílicos sistema click
+    {
+      id: 1,
+      nombre: "ValviGreen 051",
+      imagen: piso10,
+      precio: "$4500/m²",
+      tipo: "vinilico-click"
+    },
+    {
+      id: 2,
+      nombre: "ValviGreen 056",
+      imagen: piso11,
+      precio: "$5200/m²",
+      tipo: "vinilico-click"
+    },
+       {
+      id: 3,
+      nombre: "ValviGreen 061",
+      imagen: piso12,
+      precio: "$4500/m²",
+      tipo: "vinilico-click"
+    },
+    {
+      id: 4,
+      nombre: "Valvi Green 062",
+      imagen: piso13,
+      precio: "$5200/m²",
+      tipo: "vinilico-click"
+    },
+    { 
+    id: 5,
+      nombre: "Valvi Green 063",
+      imagen: piso13,
+      precio: "$5200/m²",
+      tipo: "vinilico-click"
+     },
+    
+    {
+      id: 3,
+      nombre: "Piso Autoadhesivo Moderno - Modelo C",
+      imagen: "https://picsum.photos/300/200?random=3",
+      precio: "$2800/m²",
+      ubicacion: "Interior económico",
+      tipo: "autoadhesivo"
+    },
+    {
+      id: 4,
+      nombre: "Piso Autoadhesivo Decorativo - Modelo D",
+      imagen: "https://picsum.photos/300/200?random=4",
+      precio: "$3200/m²",
+      ubicacion: "Para reformas rápidas",
+      tipo: "autoadhesivo"
+    },
+
+    // Zócalos
+    {
+      id: 5,
+      nombre: "Zócalo de PVC - Modelo E",
+      imagen: "https://picsum.photos/300/200?random=5",
+      precio: "$350/unidad",
+      ubicacion: "Altura 10cm",
+      tipo: "zocalo"
+    },
+    {
+      id: 6,
+      nombre: "Zócalo de Madera - Modelo F",
+      imagen: "https://picsum.photos/300/200?random=6",
+      precio: "$600/unidad",
+      ubicacion: "Altura 15cm",
+      tipo: "zocalo"
+    }
   ];
 
   return {
@@ -121,7 +198,8 @@ const useAppData = () => {
     incentivos,
     testimonios,
     instagramPosts,
-    productos,
+    // productos,
+    prod
   };
 };
 
