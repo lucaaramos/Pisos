@@ -6,6 +6,7 @@ import piso2 from "../assets/20.png";
 import piso3 from "../assets/21.png";
 import piso4 from "../assets/8.png";
 
+// Pisos vinílicos sistema click
 import piso10 from "../assets/valvi/1.JPG";
 import piso11 from "../assets/valvi/2.JPG";
 import piso12 from "../assets/valvi/3.JPG";
@@ -13,7 +14,23 @@ import piso13 from "../assets/valvi/3.JPG";
 import piso14 from "../assets/valvi/4.JPG";
 import piso15 from "../assets/valvi/5.JPG";
 
+// Pisos autoadhesivo
+import piso16 from "../assets/autoadhesivo/15-062.jpg";
+import piso17 from "../assets/autoadhesivo/15-063.jpg";
+import piso18 from "../assets/autoadhesivo/PG5004-11.jpg";
+import piso19 from "../assets/autoadhesivo/PG5016-13.jpg"; 
+import piso20 from "../assets/autoadhesivo/YCW8156-40.jpg";
+import piso21 from "../assets/autoadhesivo/ZY723.jpg";
 
+// Zócalos
+// import zocalo1 from "../assets/zocalos/b-80.jpg";
+import zocalo1 from "../assets/zocalos/b-80.png";
+import zocalo2 from "../assets/zocalos/b-90.png";
+import zocalo3 from "../assets/zocalos/b-95.png";
+import zocalo4 from "../assets/zocalos/b-100.png";
+import zocalo5 from "../assets/zocalos/b-120.png";
+import zocalo6 from "../assets/zocalos/c-120.png"; // Comentado porque no se usa en el código actual
+import zocalo7 from "../assets/zocalos/cb.png";
 
 
 const useAppData = () => {
@@ -78,40 +95,6 @@ const useAppData = () => {
     },
   ];
 
-  const productos = [
-    {
-      id: 1,
-      nombre: "VinicoG",
-      imagen: piso1,
-      precio: "€180,000",
-    },
-    {
-      id: 2,
-      nombre: "Piso Madera",
-      imagen: piso1,
-      precio: "€250,000",
-    },
-    {
-      id: 3,
-      nombre: "piso",
-      imagen: piso2,
-      precio: "€145,000",
-    },
-    {
-      id: 4,
-      nombre: "piso",
-      imagen: piso3,
-      precio: "€300,000",
-    },
-    {
-      id: 5,
-      nombre: "piso",
-      imagen: piso4,
-      precio: "€95,000",
-
-    },
-  ];
-
   const prod = [
     // Pisos vinílicos sistema click
     {
@@ -149,41 +132,107 @@ const useAppData = () => {
       precio: "$5200/m²",
       tipo: "vinilico-click"
      },
-    
+    //PISOS AUTOADE
     {
-      id: 3,
-      nombre: "Piso Autoadhesivo Moderno - Modelo C",
-      imagen: "https://picsum.photos/300/200?random=3",
-      precio: "$2800/m²",
-      ubicacion: "Interior económico",
+      id: 7,
+      nombre: "Piso autoadhesivo 15-062",
+      imagen: piso16,
+      precio: "$4000/m²",
       tipo: "autoadhesivo"
     },
     {
-      id: 4,
-      nombre: "Piso Autoadhesivo Decorativo - Modelo D",
-      imagen: "https://picsum.photos/300/200?random=4",
-      precio: "$3200/m²",
-      ubicacion: "Para reformas rápidas",
+      id: 8,
+      nombre: "Piso autoadhesivo 15.063",
+      imagen: piso16,
+      precio: "$4200/m²",
+      tipo: "autoadhesivo"
+    }, 
+    {
+      id: 9,
+      nombre: "Piso autoadhesivo PG5004-11",
+      imagen: piso18,
+      precio: "$4500/m²",
       tipo: "autoadhesivo"
     },
-
+    {
+      id: 10,
+      nombre: "Piso autoadhesivo PG5016-13",
+      imagen: piso19,
+      precio: "$4800/m²",
+      tipo: "autoadhesivo"
+    },
+    {
+      id: 11,
+      nombre: "Piso autoadhesivo YCW8156-50",
+      imagen: piso20,
+      precio: "$5000/m²",
+      tipo: "autoadhesivo"
+    },
+    {
+      id: 12,
+      nombre: "Piso autoadhesivo ZY723",
+      imagen: piso21,
+      precio: "$5200/m²",
+      tipo: "autoadhesivo"
+    },
+    {
+      id: 13,
+      nombre: "Piso autoadhesivo ZY723",
+      imagen: piso17,
+      precio: "$5200/m²",
+      tipo: "autoadhesivo"
+    },
     // Zócalos
     {
-      id: 5,
-      nombre: "Zócalo de PVC - Modelo E",
-      imagen: "https://picsum.photos/300/200?random=5",
-      precio: "$350/unidad",
-      ubicacion: "Altura 10cm",
+      id: 14,
+      nombre: "Zócalo B-80",
+      imagen: zocalo1,
+      precio: "$200/m",
       tipo: "zocalo"
     },
     {
-      id: 6,
-      nombre: "Zócalo de Madera - Modelo F",
-      imagen: "https://picsum.photos/300/200?random=6",
-      precio: "$600/unidad",
-      ubicacion: "Altura 15cm",
+      id: 15,
+      nombre: "Zócalo B-90",
+      imagen: zocalo2,
+      precio: "$220/m",
+      tipo: "zocalo"
+    },
+    {
+      id: 16,
+      nombre: "Zócalo B-95",
+      imagen: zocalo3,
+      precio: "$240/m",
+      tipo: "zocalo"
+    },
+    {
+      id: 17,
+      nombre: "Zócalo B-100",
+      imagen: zocalo4,
+      precio: "$260/m",
+      tipo: "zocalo"
+    },
+    {
+      id: 18,
+      nombre: "Zócalo B-120",
+      imagen: zocalo5,
+      precio: "$280/m",
+      tipo: "zocalo"
+    },
+    {
+      id: 19,
+      nombre: "Zócalo C-120",
+      imagen: zocalo6,
+      precio: "$300/m",
+      tipo: "zocalo"
+    },
+    {
+      id: 20,
+      nombre: "Zócalo CB",
+      imagen: zocalo7,
+      precio: "$320/m",
       tipo: "zocalo"
     }
+    
   ];
 
   return {

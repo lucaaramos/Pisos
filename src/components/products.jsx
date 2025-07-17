@@ -125,136 +125,261 @@
 //     </div>
 //   );
 // };
-import React, { useRef, useEffect } from "react";
+
+// import React, { useRef, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import p from "../assets/categoria/sis-click.jpg";
+// import p1 from "../assets/categoria/image.png";
+// import p2 from "../assets/categoria/image1.png";
+
+
+// const CategoriesCarousel = () => {
+//   const scrollRef = useRef(null);
+//   const [showLeftArrow, setShowLeftArrow] = React.useState(false);
+//   const [showRightArrow, setShowRightArrow] = React.useState(true);
+
+//   const categories = [
+//     {
+//       id: "vinilico-click",
+//       title: "Pisos vinílicos sistema click",
+//       image: p,
+//     },
+//     {
+//       id: "autoadhesivo",
+//       title: "Pisos vinílicos autoadhesivos",
+//       image: p2,
+//     },
+//     {
+//       id: "zocalo",
+//       title: "Zócalos de PVC",
+//       image: p1,
+//     },
+//   ];
+
+//   const handleScrollRight = () => {
+//     if (scrollRef.current) {
+//       scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
+//     }
+//   };
+
+//   const handleScrollLeft = () => {
+//     if (scrollRef.current) {
+//       scrollRef.current.scrollBy({ left: -350, behavior: "smooth" });
+//     }
+//   };
+
+//   const handleScroll = () => {
+//     const ref = scrollRef.current;
+//     if (ref) {
+//       setShowLeftArrow(ref.scrollLeft > 0);
+//       setShowRightArrow(ref.scrollLeft + ref.clientWidth < ref.scrollWidth);
+//     }
+//   };
+
+//   useEffect(() => {
+//     const ref = scrollRef.current;
+//     if (ref) {
+//       ref.addEventListener("scroll", handleScroll);
+//       handleScroll();
+//     }
+
+//     return () => {
+//       if (ref) {
+//         ref.removeEventListener("scroll", handleScroll);
+//       }
+//     };
+//   }, []);
+
+//   return (
+//     <div className="relative py-16 px-4 md:px-8 bg-gradient-to-b from-gray-50 to-orange-50 font-inter">
+//       <h1 className="text-5xl font-extrabold text-center mb-4 text-gray-900">
+//         El arte en revestimientos
+//       </h1>
+//       <h2 className="text-3xl font-medium text-center mb-12 text-gray-700">
+//         Servicio de instalación y reparación
+//       </h2>
+
+//       <div className="max-w-6xl mx-auto relative">
+//         {/* Flecha izquierda */}
+//         {showLeftArrow && (
+//           <button
+//             onClick={handleScrollLeft}
+//             className="hidden md:flex items-center justify-center absolute top-1/2 left-0 transform -translate-y-1/2 -ml-6 bg-white border border-orange-300 shadow-lg rounded-full w-12 h-12 hover:bg-orange-500 hover:text-white transition-all duration-300 z-10"
+//             aria-label="Ver categoría anterior"
+//           >
+//             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+//               <polyline points="15 18 9 12 15 6"></polyline>
+//             </svg>
+//           </button>
+//         )}
+
+//         {/* Carrusel */}
+//         <div
+//           ref={scrollRef}
+//           className="flex overflow-x-auto gap-6 pb-6 snap-x scroll-smooth px-4 scrollbar-hide"
+//         >
+//           {/* Contenedor centrado */}
+//           <div className="flex flex-nowrap gap-6 min-w-max mx-auto">
+//             {categories.map((cat, index) => (
+//               <Link
+//                 key={cat.id}
+//                 to={`/categoria/${cat.id}`}
+//                 data-aos="fade-up"
+//                 data-aos-delay={`${index * 100}`}
+//                 className="snap-start shrink-0 grow-0 basis-[280px] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col group text-center"
+//               >
+//                 <img
+//                   src={cat.image}
+//                   alt={cat.title}
+//                   className="w-full h-48 object-cover rounded-t-xl"
+//                 />
+//                 <div className="p-6 bg-white flex-grow">
+//                   <h3 className="font-semibold text-gray-800 text-lg">{cat.title}</h3>
+//                 </div>
+//               </Link>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Flecha derecha */}
+//         {showRightArrow && (
+//           <button
+//             onClick={handleScrollRight}
+//             className="hidden md:flex items-center justify-center absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-6 bg-white border border-orange-300 shadow-lg rounded-full w-12 h-12 hover:bg-orange-500 hover:text-white transition-all duration-300 z-10"
+//             aria-label="Ver siguiente categoría"
+//           >
+//             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+//               <polyline points="9 18 15 12 9 6"></polyline>
+//             </svg>
+//           </button>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default CategoriesCarousel;
+import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import p from "../assets/categoria/sis-click.jpg";
 import p1 from "../assets/categoria/image.png";
 import p2 from "../assets/categoria/image1.png";
 
-
-const CategoriesCarousel = () => {
-  const scrollRef = useRef(null);
-  const [showLeftArrow, setShowLeftArrow] = React.useState(false);
-  const [showRightArrow, setShowRightArrow] = React.useState(true);
-
+const CategoriesSection = () => {
   const categories = [
     {
       id: "vinilico-click",
       title: "Pisos vinílicos sistema click",
       image: p,
+      description: "Fácil instalación sin adhesivos"
     },
     {
       id: "autoadhesivo",
       title: "Pisos vinílicos autoadhesivos",
-      image: p1,
+      image: p2,
+      description: "Perfecto para renovaciones rápidas"
     },
     {
       id: "zocalo",
       title: "Zócalos de PVC",
-      image: p2,
+      image: p1,
+      description: "Acabado profesional y duradero"
     },
   ];
 
-  const handleScrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
-    }
-  };
-
-  const handleScrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -350, behavior: "smooth" });
-    }
-  };
-
-  const handleScroll = () => {
-    const ref = scrollRef.current;
-    if (ref) {
-      setShowLeftArrow(ref.scrollLeft > 0);
-      setShowRightArrow(ref.scrollLeft + ref.clientWidth < ref.scrollWidth);
-    }
-  };
-
-  useEffect(() => {
-    const ref = scrollRef.current;
-    if (ref) {
-      ref.addEventListener("scroll", handleScroll);
-      handleScroll();
-    }
-
-    return () => {
-      if (ref) {
-        ref.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, []);
-
   return (
-    <div className="relative py-16 px-4 md:px-8 bg-gradient-to-b from-gray-50 to-orange-50 font-inter">
-      <h1 className="text-5xl font-extrabold text-center mb-4 text-gray-900">
-        El arte en revestimientos
-      </h1>
-      <h2 className="text-3xl font-medium text-center mb-12 text-gray-700">
-        Servicio de instalación y reparación
-      </h2>
-
-      <div className="max-w-6xl mx-auto relative">
-        {/* Flecha izquierda */}
-        {showLeftArrow && (
-          <button
-            onClick={handleScrollLeft}
-            className="hidden md:flex items-center justify-center absolute top-1/2 left-0 transform -translate-y-1/2 -ml-6 bg-white border border-orange-300 shadow-lg rounded-full w-12 h-12 hover:bg-orange-500 hover:text-white transition-all duration-300 z-10"
-            aria-label="Ver categoría anterior"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-        )}
-
-        {/* Carrusel */}
-        <div
-          ref={scrollRef}
-          className="flex overflow-x-auto gap-6 pb-6 snap-x scroll-smooth px-4 scrollbar-hide"
+    <div className="relative py-16 px-4 md:px-8 bg-gradient-to-b from-gray-50 to-orange-50">
+      {/* Títulos */}
+      <div className="text-center mb-12">
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-5xl font-bold text-gray-900 mb-2"
         >
-          {/* Contenedor centrado */}
-          <div className="flex flex-nowrap gap-6 min-w-max mx-auto">
-            {categories.map((cat, index) => (
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-500">
+            El arte en revestimientos
+          </span>
+        </motion.h1>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="text-xl md:text-2xl font-medium text-gray-600 max-w-2xl mx-auto"
+        >
+          Servicio profesional de instalación y reparación
+        </motion.h2>
+      </div>
+
+      {/* Versión Desktop - Grid de 3 columnas */}
+      <div className="hidden md:block max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+          {categories.map((cat, index) => (
+            <motion.div
+              key={cat.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
               <Link
-                key={cat.id}
                 to={`/categoria/${cat.id}`}
-                data-aos="fade-up"
-                data-aos-delay={`${index * 100}`}
-                className="snap-start shrink-0 grow-0 basis-[280px] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col group text-center"
+                className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group overflow-hidden block h-full"
               >
-                <img
-                  src={cat.image}
-                  alt={cat.title}
-                  className="w-full h-48 object-cover rounded-t-xl"
-                />
-                <div className="p-6 bg-white flex-grow">
-                  <h3 className="font-semibold text-gray-800 text-lg">{cat.title}</h3>
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                </div>
+                <div className="p-6 bg-white">
+                  <h3 className="font-bold text-gray-800 text-lg mb-1">{cat.title}</h3>
+                  <p className="text-gray-500 text-sm mb-3">{cat.description}</p>
+                  <button className="mt-2 text-orange-600 font-medium text-sm flex items-center justify-center group-hover:text-orange-700">
+                    Ver productos
+                    <svg className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
               </Link>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
+      </div>
 
-        {/* Flecha derecha */}
-        {showRightArrow && (
-          <button
-            onClick={handleScrollRight}
-            className="hidden md:flex items-center justify-center absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-6 bg-white border border-orange-300 shadow-lg rounded-full w-12 h-12 hover:bg-orange-500 hover:text-white transition-all duration-300 z-10"
-            aria-label="Ver siguiente categoría"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        )}
+      {/* Versión Mobile - Carrusel */}
+      <div className="md:hidden max-w-6xl mx-auto relative">
+        <div className="flex overflow-x-auto gap-4 pb-8 snap-x snap-mandatory scroll-smooth scrollbar-hide px-4">
+          {categories.map((cat, index) => (
+            <div key={cat.id} className="snap-start shrink-0 w-[85vw]">
+              <Link
+                to={`/categoria/${cat.id}`}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 block h-full"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4 bg-white">
+                  <h3 className="font-semibold text-gray-800 text-lg">{cat.title}</h3>
+                  <p className="text-gray-500 text-sm mt-1">{cat.description}</p>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default CategoriesCarousel;
+export default CategoriesSection;
