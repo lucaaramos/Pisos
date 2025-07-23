@@ -184,10 +184,9 @@ const ProductDetailPage = () => {
 
   return (
     <>
-      {/* Contenido principal */}
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-yellow-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8">
-          {/* Botón de regreso - Versión mejorada */}
+         
           <button
             onClick={() => navigate(`/categoria/${producto.tipo}`)}
             className="flex items-center gap-2 text-orange-600 hover:text-orange-800 font-medium transition-all duration-300 group mb-4 cursor-pointer"
@@ -213,9 +212,7 @@ const ProductDetailPage = () => {
             </span>
           </button>
 
-          {/* Detalle del producto */}
           <div className="grid md:grid-cols-2 gap-8 items-start bg-white rounded-2xl shadow-xl overflow-hidden">
-            {/* Galería de imágenes */}
             <div
               className="relative group cursor-pointer"
               onClick={() => setModalOpen(true)}
@@ -233,7 +230,7 @@ const ProductDetailPage = () => {
               </div>
             </div>
 
-            {/* Detalles del producto */}
+       
             <div className="p-8 space-y-6">
               <h1 className="text-2xl md:text-3xl font-bold text-gray-900">{producto.nombre}</h1>
               <p className="text-xl font-bold text-orange-600">{producto.precio}</p>
@@ -253,7 +250,7 @@ const ProductDetailPage = () => {
                 ))}
               </ul>
 
-              {/* Botón WhatsApp */}
+            
               <a
                 href={`https://wa.me/5491112345678?text=Hola%20quisiera%20más%20información%20sobre%20${encodeURIComponent(producto.nombre)}`}
                 target="_blank"
@@ -267,8 +264,6 @@ const ProductDetailPage = () => {
               </a>
             </div>
           </div>
-
-          {/* Sección: ¿Qué incluye tu compra? */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-orange-100">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">¿Qué incluye tu compra?</h2>
             <div className="space-y-8">
@@ -294,8 +289,6 @@ const ProductDetailPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Modal de imagen ampliada */}
       {modalOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"

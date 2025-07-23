@@ -25,10 +25,6 @@ const Footer = () => {
               <h3 className="text-2xl font-bold mb-6">
                 Pisos<span className="text-yellow-500">Ya</span>
               </h3>
-              {/* <p className="mb-6 text-indigo-200">
-                Tu socio de confianza para encontrar el hogar de tus sueños. Más
-                de 10 años de experiencia en el sector inmobiliario.
-              </p> */}
               <div className="flex space-x-4">
                 {["facebook-f", "instagram"].map(
                   (icon, i) => (
@@ -91,10 +87,6 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-bold mb-6">Contacto</h4>
               <ul className="space-y-3">
-                <li className="flex items-start">
-                  {/* <i className="fas fa-map-marker-alt mt-1 mr-3 text-yellow-500"></i> */}
-                  {/* <span>Av. Principal 123, Madrid, España</span> */}
-                </li>
                 <li className="flex items-start">
                   <i className="fas fa-phone-alt mt-1 mr-3 text-yellow-500"></i>
                   <span>+54 9 11 3473-8358</span>
