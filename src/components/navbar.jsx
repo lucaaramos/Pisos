@@ -17,8 +17,6 @@ const Navbar = ({ isScrolled }) => {
             className="h-12"
           />
         </div>
-
-        {/* Menú desktop */}
         <div className="hidden md:flex space-x-6">
           <a
             href="/"
@@ -51,8 +49,6 @@ const Navbar = ({ isScrolled }) => {
             Contacto
           </a>
         </div>
-
-        {/* Botón hamburguesa */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden text-gray-700 focus:outline-none"
@@ -60,8 +56,6 @@ const Navbar = ({ isScrolled }) => {
           <i className="fas fa-bars text-xl"></i>
         </button>
       </div>
-
-      {/* Menú móvil desplegable */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg absolute w-full left-0 top-full border-t border-gray-200 animate-fadeIn">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-3">

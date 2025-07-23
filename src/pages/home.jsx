@@ -17,7 +17,7 @@ const Home = () => {
     {/* <Navbar /> */}
     <Hero />
     < About/>
-    <Products /> {/* Aqui quiero que vaya el boton de volver atras*/}
+    <Products />
     <Benefitis />
       <Contacto />
       <Testimonios />

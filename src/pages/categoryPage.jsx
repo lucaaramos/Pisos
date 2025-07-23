@@ -9,7 +9,6 @@ const CategoryPage = () => {
   const navigate = useNavigate();
   const { prod } = useAppData();
   
-  // Formatear el título de la categoría
   const formatCategoryName = (id) => {
     const names = {
       'vinilico-click': 'Pisos Vinílicos Click',
@@ -19,7 +18,6 @@ const CategoryPage = () => {
     return names[id] || id.replace(/-/g, " ");
   };
 
-  // Desplazarse al inicio al cargar
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
@@ -48,7 +46,7 @@ const CategoryPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header con botón de regreso */}
+    
         <div className="mb-10">
           <button
             onClick={() => navigate(`/`)}
@@ -60,7 +58,6 @@ const CategoryPage = () => {
             Volver atrás
           </button>
           
-          {/* Título con tipografía mejorada */}
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-2 tracking-tight">
             {formatCategoryName(id)}
           </h2>
@@ -69,7 +66,6 @@ const CategoryPage = () => {
           </p>
         </div>
 
-        {/* Grilla de productos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {productosFiltrados.map((p) => (
             <Link

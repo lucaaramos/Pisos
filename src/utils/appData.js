@@ -29,7 +29,7 @@ import zocalo2 from "../assets/zocalos/b-90.png";
 import zocalo3 from "../assets/zocalos/b-95.png";
 import zocalo4 from "../assets/zocalos/b-100.png";
 import zocalo5 from "../assets/zocalos/b-120.png";
-import zocalo6 from "../assets/zocalos/c-120.png"; // Comentado porque no se usa en el código actual
+import zocalo6 from "../assets/zocalos/c-120.png"; 
 import zocalo7 from "../assets/zocalos/cb.png";
 
 

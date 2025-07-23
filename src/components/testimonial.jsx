@@ -1,8 +1,8 @@
 import React from "react";
-import useAppData from "../utils/appData"; // importa el hook
+import useAppData from "../utils/appData";
 
 const TestimonialsSection = () => {
-  const { testimonios } = useAppData(); // usa el hook y extrae los testimonios
+  const { testimonios } = useAppData();
 
   return (
     <section id="testimonios" className="py-20 bg-white">

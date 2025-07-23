@@ -56,7 +56,6 @@ const ContactFormSection = () => {
         autoClose: 5000,
       });
 
-      // Resetear formulario y marcar como enviado
       setFormData({
         nombre: "",
         email: "",
@@ -66,7 +65,6 @@ const ContactFormSection = () => {
       });
       setIsSubmitted(true);
       
-      // Ocultar el mensaje de confirmación después de 8 segundos
       setTimeout(() => {
         setIsSubmitted(false);
       }, 8000);
@@ -84,7 +82,6 @@ const ContactFormSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
           <div className="grid md:grid-cols-2">
-            {/* Lado izquierdo con información */}
             <div className="p-10 bg-orange-800 text-white">
               <h2 className="text-3xl font-bold mb-6">Agenda una visita con nosotros</h2>
               <p className="mb-8">
@@ -112,7 +109,6 @@ const ContactFormSection = () => {
               </div>
             </div>
 
-            {/* Lado derecho con formulario */}
             <div className="p-10 relative">
               {isSubmitted ? (
                 <div className="text-center py-10">
