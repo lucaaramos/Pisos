@@ -1,4 +1,4 @@
-# Pisos Vinílicos - Sitio Web Inmobiliario
+# Pisos Vinílicos
 
 Sitio web de presentación de pisos, desarrollado con **React** y **Tailwind CSS**
 
