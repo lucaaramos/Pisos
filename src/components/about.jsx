@@ -11,12 +11,9 @@ const AboutUsSection = () => {
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Contenedor de imagen optimizado */}
-          <div className="lg:order-1 w-full lg:w-1/2 relative group">
-            {/* Sombra exterior ajustada */}
+            <div className="lg:order-1 w-full lg:w-1/2 relative group">
             <div className="absolute -inset-1 rounded-lg opacity-20 group-hover:opacity-30 blur-md transition-all duration-300"></div>
             
-            {/* Contenedor de imagen sin espacio extra */}
             <div className="relative z-10 w-full max-w-md mx-auto">
               <img
                 src={piso2}
@@ -25,12 +22,9 @@ const AboutUsSection = () => {
                 loading="lazy"
                 decoding="async"
               />
-              {/* Sombra interior ajustada al tamaño exacto */}
               <div className="absolute inset-0 rounded-lg shadow-inner border border-orange-100/30 pointer-events-none"></div>
             </div>
           </div>
-
-          {/* Sección de texto */}
           <div className="lg:order-2 w-full lg:w-1/2">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-orange-800">
               ¿Por qué elegir nuestros pisos vinílicos?

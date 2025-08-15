@@ -14,9 +14,8 @@ const ContactFormSection = () => {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false); // Nuevo estado para controlar el envío exitoso
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Validación de campos
   const validateForm = () => {
     const newErrors = {};
     if (!formData.nombre.trim()) newErrors.nombre = "El nombre es obligatorio";
